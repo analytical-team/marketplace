@@ -56,5 +56,8 @@
 
 - User requested that only the `tychoengr` GitHub account can push and that pull requests are not accepted.
 - Added a pull-request-target workflow that closes opened or reopened PRs, with pull-request write permission and no checkout or execution of contributor code. Added a short contribution policy.
-- Prepare all-branch and all-tag rulesets restricting creation, updates, and deletion to `tychoengr` (GitHub user ID 251394477). Apply after publishing the pending changes, then verify enforcement.
+- Applied active all-branch ruleset 26551916 and all-tag ruleset 26551923, restricting creation, updates, and deletion to `tychoengr` (GitHub user ID 251394477), with no role or administrator bypass.
 - GitHub does not provide a repository setting to disable PR creation. The workflow closes them automatically; repository administrators can still edit repository rules.
+- Verified `asifr` cannot create a branch or tag, while `tychoengr` can create and delete a temporary verification branch. Removed the temporary branch.
+- Actionlint passed for the PR-closing workflow, and GitHub reports it active. No open PRs existed; live PR closure has not been exercised.
+- Published Jobs, the simplified README, and the contribution policy using the existing `tychoengr` credentials without changing the global GitHub CLI account selection.
