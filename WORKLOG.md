@@ -70,3 +70,12 @@
 - Registered the plugin in both catalogs and added its installation command and one-line description to the user README.
 - Skill Creator and native Claude validators passed. Isolated Claude and Codex installations contain the complete guide tree; Claude reports exactly one skill named `coding`.
 - Checked that the plugin contains no stale `coding-skill` names or sibling-file links and that all four guide links resolve within the installed package.
+
+## 2026-11-04 13:03 EST — Fold user-flow audits into Coding
+
+- Added the existing audit methodology and its gated-feature, mutation, evidence, and research references inside `coding`.
+- Extended Coding's discovery description, reference index, and audit workflow, and replaced the optional external audit-skill reference with bundled guidance.
+- Kept full audits scoped to requested feature qualification or gap discovery; routine edits retain focused user-flow checks.
+- Bumped Coding to `0.1.1` and updated its manifests, UI metadata, catalog description, and README entry. No standalone audit plugin was created.
+- Native Claude and Skill Creator validations passed. Isolated Claude and Codex installations preserve all nested audit references, and Claude's inventory remains a single `coding` skill.
+- Reviewed the relocated local links, including the gated-features-to-mutations link, and confirmed no external `user-flow-audit` skill references remain in the package.

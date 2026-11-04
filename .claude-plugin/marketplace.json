@@ -28,7 +28,7 @@
     {
       "name": "coding",
       "source": "./plugins/coding",
-      "description": "Engineering standards for architecture, implementation, testing, and validation."
+      "description": "Engineering standards for architecture, implementation, testing, and user-flow audits."
     }
   ]
 }

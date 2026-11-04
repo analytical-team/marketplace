@@ -80,7 +80,7 @@ Direct testing efforts towards the high-risk failure mechanisms identified in sy
 ## 5. Integrating with user flow audits
 
 Integration tests are the foundation, but complete qualification requires human and external client reachability.
-Use `user-flow-audit` when installed and a feature audit is requested, or apply these checks directly as appropriate:
+For feature qualification and gap discovery, use the bundled [user-flow audit guide](user-flows.md):
 1. Validate interactive PTY terminals, exit codes, and screen rendering.
 2. Confirm symmetric positive access and justified refusal.
 3. Validate test sensitivity by running isolated mutation checks.

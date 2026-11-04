@@ -1,10 +1,11 @@
 ---
 name: coding
 description: >-
-  Apply engineering standards when implementing, refactoring, or reviewing
-  software across languages. Covers architecture and resource ownership,
+  Apply engineering standards when implementing, refactoring, reviewing,
+  or auditing software across languages. Covers architecture and resource ownership,
   type-driven design, parsing at boundaries, integration-first testing,
-  command execution, and validation of real user flows.
+  command execution, and end-to-end audits for missing, unreachable, or incorrectly
+  gated user features.
 ---
 
 # Coding
@@ -22,6 +23,7 @@ Read the references relevant to the task; do not load every guide by default.
 | [Engineering principles](references/engineering-principles.md) | Architecture, contracts, shared state, resource ownership, and lifecycle boundaries |
 | [Structure over strings](references/structure-over-strings.md) | Types, parsing, serialization, errors, and trust boundaries |
 | [Testing philosophy](references/testing-philosophy.md) | Test selection, real integration boundaries, isolation, and user-flow validation |
+| [User-flow audits](references/user-flows.md) | Feature qualification, missing or unreachable behavior, permission gates, lifecycle checks, and audit evidence |
 | [Tooling and scripts](references/tooling-and-scripts.md) | Commands, process lifecycle, Python tooling, environment settings, and worklogs |
 
 ## Workflow
@@ -61,11 +63,31 @@ Read the references relevant to the task; do not load every guide by default.
   workflow, explain the problem, resulting behavior, concrete validation, and any
   visible UI changes. Follow the repository's identity and attribution policy.
 
+## User-flow audits
+
+For feature audits, qualification, or gap discovery, read the
+[user-flow audit guide](references/user-flows.md). Bound the audit to the requested
+features; ordinary implementation checks do not require a full application audit.
+
+- Derive scenarios from user requirements and documentation independently of the
+  production parser, enum, or option list.
+- Prove both successful access and justified refusal through supported user flows.
+  Vary fresh/existing data, configuration, execution mode, and lifecycle sequences.
+- Observe presentation, authoritative state, and external effects separately.
+  A success message or exit code alone does not prove completion.
+- For audit sensitivity checks, introduce plausible defects only in an isolated
+  workspace. Require a behavioral failure; compilation errors are inconclusive.
+- Explore a concrete goal through normal help and navigation. Record the exact
+  target build, evidence, defects, coverage gaps, check weaknesses, and unverified
+  boundaries. Never generalize a passing sample to unaudited features.
+
+The guide links to detailed procedures for gated features, isolated mutations,
+evidence classification, and supporting research. They are bundled with `coding`.
+
 ## Companion tooling
 
 When installed, use `python-coding`, `typescript-coding`, or `swift-coding` for the
 language-specific conventions, and `jobs` for supervised command execution. For
-interactive terminals use Rex when available. `user-flow-audit` can supply deeper
-qualification methods when a feature audit is requested. These are separate
+interactive terminals use Rex when available. These companions are separate
 installations; if unavailable, use the project's existing tools and apply the
 bundled guidance directly.

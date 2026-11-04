@@ -1,6 +1,6 @@
 interface:
   display_name: "Coding"
-  short_description: "Engineering standards for implementation and review"
-  default_prompt: "Use $coding to implement or review this change, validate its behavior, and check its architecture."
+  short_description: "Engineering standards and end-to-end feature audits"
+  default_prompt: "Use $coding to implement, review, or audit this feature and verify its real user flow."
 policy:
   allow_implicit_invocation: true

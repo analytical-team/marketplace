@@ -34,7 +34,7 @@ the mention menu. Marketplace availability depends on your client and workspace.
 
 | Skill | Use for |
 | --- | --- |
-| [Coding](plugins/coding/skills/coding/SKILL.md) | Engineering standards, architecture, and testing across languages |
+| [Coding](plugins/coding/skills/coding/SKILL.md) | Engineering standards, architecture, testing, and user-flow audits |
 | [Python Coding](plugins/python-coding/skills/python-coding/SKILL.md) | Writing and reviewing Python |
 | [TypeScript Coding](plugins/typescript-coding/skills/typescript-coding/SKILL.md) | Writing and reviewing TypeScript and React |
 | [Swift Coding](plugins/swift-coding/skills/swift-coding/SKILL.md) | Writing and reviewing Swift and SwiftUI |
