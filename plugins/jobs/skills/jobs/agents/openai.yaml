@@ -1,0 +1,6 @@
+interface:
+  display_name: "Jobs"
+  short_description: "Run, track and verify work across every project"
+  default_prompt: "Use $jobs to run this task, track its progress, and verify the recorded result."
+policy:
+  allow_implicit_invocation: true

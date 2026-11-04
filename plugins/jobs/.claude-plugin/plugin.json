@@ -1,0 +1,10 @@
+{
+  "name": "jobs",
+  "version": "0.1.0",
+  "description": "Run, track, and verify named jobs with jobctl.",
+  "author": {
+    "name": "Analytical Team"
+  },
+  "repository": "https://github.com/analytical-team/marketplace",
+  "keywords": ["jobs", "jobctl", "processes", "task-execution"]
+}

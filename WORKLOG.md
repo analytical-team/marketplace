@@ -40,3 +40,21 @@
 - Parsed-link verification confirms that every local documentation link resolves and `SKILL.md` directly references all seventeen topic files.
 - Skill and native Claude validations passed. Isolated Claude and Codex installations of `0.1.1` preserve the complete skill directory, including every topic file.
 - Both temporary Python scripts pass Ruff and strict mypy checks.
+
+## 2026-11-04 12:52 EST — Jobs plugin
+
+- Added `jobs` to both marketplace catalogs, with portable and Claude manifests and OpenAI skill metadata.
+- Bundled the existing standalone `jobctl.py` runtime, including its embedded guide and pinned dependencies. The skill resolves this bundled copy when `jobctl` is absent from PATH.
+- Documented `uv` and macOS/Linux requirements and optional Rex views. No global command links or personal skill settings are installed by the plugin.
+- Fixed local table variable names in the imported CLI that conflicted with its boolean `rows` option under strict mypy; command behavior is unchanged.
+- Skill and native Claude manifest validations passed. Initial isolated installations preserved the bundled files and an installed runtime successfully recorded a completed job.
+- The existing isolated CLI integration suite passed again after the variable rename, covering skill setup conflicts, headless operation, scheduling, health checks, cancellation, and pruning.
+- Final isolated Claude and Codex installations preserve every bundled file. Ruff and strict mypy pass for the bundled runtime.
+- Trimmed the README to installation, invocation, available skills, and runtime requirements.
+
+## 2026-11-04 — Repository access policy
+
+- User requested that only the `tychoengr` GitHub account can push and that pull requests are not accepted.
+- Added a pull-request-target workflow that closes opened or reopened PRs, with pull-request write permission and no checkout or execution of contributor code. Added a short contribution policy.
+- Prepare all-branch and all-tag rulesets restricting creation, updates, and deletion to `tychoengr` (GitHub user ID 251394477). Apply after publishing the pending changes, then verify enforcement.
+- GitHub does not provide a repository setting to disable PR creation. The workflow closes them automatically; repository administrators can still edit repository rules.
