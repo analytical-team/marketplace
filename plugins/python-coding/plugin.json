@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "python-coding",
+  "version": "0.1.0",
+  "description": "Analytical Team's Python coding standards for implementation and review.",
+  "author": {
+    "name": "Analytical Team"
+  },
+  "repository": "https://github.com/analytical-team/marketplace",
+  "keywords": ["python", "coding", "code-review"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Python Coding",
+        "shortDescription": "Python coding standards for implementation and review",
+        "developerName": "Analytical Team",
+        "category": "Productivity"
+      }
+    }
+  }
+}

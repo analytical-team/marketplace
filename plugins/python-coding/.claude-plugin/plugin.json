@@ -1,0 +1,10 @@
+{
+  "name": "python-coding",
+  "version": "0.1.0",
+  "description": "Analytical Team's Python coding standards for implementation and review.",
+  "author": {
+    "name": "Analytical Team"
+  },
+  "repository": "https://github.com/analytical-team/marketplace",
+  "keywords": ["python", "coding", "code-review"]
+}

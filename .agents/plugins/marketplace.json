@@ -1,0 +1,20 @@
+{
+  "name": "analytical-team",
+  "interface": {
+    "displayName": "Analytical Team"
+  },
+  "plugins": [
+    {
+      "name": "python-coding",
+      "source": {
+        "source": "local",
+        "path": "./plugins/python-coding"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

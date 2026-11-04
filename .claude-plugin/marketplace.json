@@ -1,0 +1,14 @@
+{
+  "name": "analytical-team",
+  "description": "Analytical Team's coding skills for implementation and review.",
+  "owner": {
+    "name": "Analytical Team"
+  },
+  "plugins": [
+    {
+      "name": "python-coding",
+      "source": "./plugins/python-coding",
+      "description": "Analytical Team's Python coding standards for implementation and review."
+    }
+  ]
+}

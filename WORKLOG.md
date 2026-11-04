@@ -1,0 +1,21 @@
+# Worklog
+
+## 2026-11-04 12:38 EST — Initial marketplace
+
+- Goal: distribute `python-coding` through one Git repository to ChatGPT and Claude Code.
+- Repository started empty. Reuse the existing local Python skill and its full reference guide.
+- Use two platform catalogs pointing at one plugin directory and one shared skill tree.
+- Use a portable root manifest with OpenAI presentation metadata and a Claude compatibility manifest.
+- Acceptance: valid catalogs and manifests, bundled reference available after installation, documented installation for both clients.
+- No public directory submission or changes to personal plugin settings are part of this setup.
+
+## 2026-11-04 12:39 EST — Validation
+
+- Imported `SKILL.md` and `references/style-guide.md` unchanged from the existing local skill.
+- Skill Creator's validator passed; both Claude manifests passed native validation with no warnings after adding the catalog description.
+- Installed through each local marketplace using temporary `CODEX_HOME` and `CLAUDE_CONFIG_DIR` directories under `/tmp/marketplace-install.3tAz1G`.
+- Codex lists version `0.1.0` installed and enabled. Claude's component inventory reports exactly one skill, `python-coding`.
+- Checked catalog names and source paths agree; plugin manifest names, versions, and descriptions agree.
+- Both installed skill directories match the source tree exactly, including the full style guide and OpenAI skill metadata.
+- No Python implementation was added; linting and type checking do not apply to Markdown, JSON, and YAML packaging.
+- ChatGPT desktop UI installation and model behavior have not been exercised. Repository files are local and have not been committed or pushed.

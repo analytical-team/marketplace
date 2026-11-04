@@ -1,0 +1,6 @@
+interface:
+  display_name: "Python Coding"
+  short_description: "Python coding standards for implementation and review"
+  default_prompt: "Use $python-coding to implement or review Python code using Analytical Team's conventions."
+policy:
+  allow_implicit_invocation: true
