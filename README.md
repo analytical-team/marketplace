@@ -8,6 +8,7 @@ Run inside Claude Code, choosing the skills you want:
 
 ```text
 /plugin marketplace add analytical-team/marketplace
+/plugin install coding@analytical-team
 /plugin install python-coding@analytical-team
 /plugin install typescript-coding@analytical-team
 /plugin install swift-coding@analytical-team
@@ -15,7 +16,7 @@ Run inside Claude Code, choosing the skills you want:
 ```
 
 Start a new session. Skills activate for relevant tasks, or you can invoke one
-directly, such as `/python-coding:python-coding` or `/jobs:jobs`.
+directly, such as `/coding:coding` or `/jobs:jobs`.
 
 ## Install in ChatGPT desktop
 
@@ -33,6 +34,7 @@ the mention menu. Marketplace availability depends on your client and workspace.
 
 | Skill | Use for |
 | --- | --- |
+| [Coding](plugins/coding/skills/coding/SKILL.md) | Engineering standards, architecture, and testing across languages |
 | [Python Coding](plugins/python-coding/skills/python-coding/SKILL.md) | Writing and reviewing Python |
 | [TypeScript Coding](plugins/typescript-coding/skills/typescript-coding/SKILL.md) | Writing and reviewing TypeScript and React |
 | [Swift Coding](plugins/swift-coding/skills/swift-coding/SKILL.md) | Writing and reviewing Swift and SwiftUI |

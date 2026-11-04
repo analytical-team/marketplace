@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coding",
+  "version": "0.1.0",
+  "description": "Engineering standards for architecture, implementation, testing, and validation.",
+  "author": {
+    "name": "Analytical Team"
+  },
+  "repository": "https://github.com/analytical-team/marketplace",
+  "keywords": ["coding", "engineering", "architecture", "testing"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Coding",
+        "shortDescription": "Engineering standards for implementation and review",
+        "developerName": "Analytical Team",
+        "category": "Productivity"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "coding",
+  "version": "0.1.0",
+  "description": "Engineering standards for architecture, implementation, testing, and validation.",
+  "author": {
+    "name": "Analytical Team"
+  },
+  "repository": "https://github.com/analytical-team/marketplace",
+  "keywords": ["coding", "engineering", "architecture", "testing"]
+}

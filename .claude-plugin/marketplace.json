@@ -24,6 +24,11 @@
       "name": "jobs",
       "source": "./plugins/jobs",
       "description": "Run, track, and verify named jobs with jobctl."
+    },
+    {
+      "name": "coding",
+      "source": "./plugins/coding",
+      "description": "Engineering standards for architecture, implementation, testing, and validation."
     }
   ]
 }

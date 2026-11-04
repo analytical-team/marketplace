@@ -61,3 +61,12 @@
 - Verified `asifr` cannot create a branch or tag, while `tychoengr` can create and delete a temporary verification branch. Removed the temporary branch.
 - Actionlint passed for the PR-closing workflow, and GitHub reports it active. No open PRs existed; live PR closure has not been exercised.
 - Published Jobs, the simplified README, and the contribution policy using the existing `tychoengr` credentials without changing the global GitHub CLI account selection.
+
+## 2026-11-04 13:00 EST — Coding plugin
+
+- Added the existing universal engineering guidance as `coding`, with no `skill` suffix in its package name, skill name, display name, or invocation metadata.
+- Bundled the four existing topic guides and linked each from a concise skill entrypoint. Kept architecture, parsing, testing, tooling, static checks, real user-flow validation, and delivery guidance.
+- Replaced links to unbundled sibling skills with optional companion names, aligned closed-set types with the TypeScript guide, and removed an unsupported research attribution from the imported testing reference.
+- Registered the plugin in both catalogs and added its installation command and one-line description to the user README.
+- Skill Creator and native Claude validators passed. Isolated Claude and Codex installations contain the complete guide tree; Claude reports exactly one skill named `coding`.
+- Checked that the plugin contains no stale `coding-skill` names or sibling-file links and that all four guide links resolve within the installed package.
