@@ -1,8 +1,8 @@
 # Analytical Team marketplace
 
-Reusable coding skills for ChatGPT and Claude Code. The first plugin,
-**python-coding**, packages Analytical Team's Python conventions and full style
-guide for writing, refactoring, and reviewing Python.
+Reusable coding skills for ChatGPT and Claude Code. Each plugin packages
+Analytical Team's conventions and full style guide for writing, refactoring,
+and reviewing code.
 
 ## Install in Claude Code
 
@@ -11,10 +11,14 @@ Run these commands inside Claude Code:
 ```text
 /plugin marketplace add analytical-team/marketplace
 /plugin install python-coding@analytical-team
+/plugin install typescript-coding@analytical-team
+/plugin install swift-coding@analytical-team
 ```
 
-Start a new session, then invoke `/python-coding:python-coding` with your task.
-Claude can also select the skill automatically for relevant Python work.
+Install the plugins you want. Start a new session, then invoke
+`/python-coding:python-coding`, `/typescript-coding:typescript-coding`, or
+`/swift-coding:swift-coding` with your task. Claude can also select the relevant
+skill automatically.
 
 See the [Claude Code marketplace guide](https://code.claude.com/docs/en/plugin-marketplaces).
 
@@ -28,10 +32,11 @@ codex plugin marketplace add analytical-team/marketplace
 ```
 
 Restart ChatGPT, open the Plugins Directory, select **Analytical Team**, and
-install **Python Coding**. Start a new conversation and select the skill from
-the mention menu, or ask it to use Python Coding for your task.
+install **Python Coding**, **TypeScript Coding**, or **Swift Coding**. Start a
+new conversation and select the skill from the mention menu, or ask it to use
+the coding skill for your task.
 
-For local development before the repository is published:
+For local development:
 
 ```sh
 codex plugin marketplace add /absolute/path/to/marketplace
@@ -42,7 +47,7 @@ depends on the client and workspace policy; adding this repository does not
 publish the plugin to the public ChatGPT directory. See OpenAI's
 [plugin packaging and marketplace guide](https://developers.openai.com/plugins/build/plugins).
 
-## Included skill
+## Included skills
 
 [`python-coding`](plugins/python-coding/skills/python-coding/SKILL.md) covers
 strict typing, structured concurrency, protocol-based APIs, settings, typed
@@ -50,23 +55,33 @@ errors, parsing at trust boundaries, integration testing, and report generation.
 Its [full style guide](plugins/python-coding/skills/python-coding/references/style-guide.md)
 includes rationale and examples.
 
-This is an opinionated house style. The plugin contains instructions and
-references; it does not install Python, dependencies, services, or hooks.
-Following its workflows requires `uv` and the tools appropriate to the task,
-such as Ruff, mypy, pytest, and mdreport for report generation.
+[`typescript-coding`](plugins/typescript-coding/skills/typescript-coding/SKILL.md)
+covers strict TypeScript, React, Vite, boundary parsing, async work,
+accessibility, browser security, and testing. Its
+[full style guide](plugins/typescript-coding/skills/typescript-coding/references/style-guide.md)
+includes rationale and examples.
+
+[`swift-coding`](plugins/swift-coding/skills/swift-coding/SKILL.md) covers Swift
+concurrency, actors, protocol-based APIs, typed errors, SwiftUI, testing, and
+linting. Its [full style guide](plugins/swift-coding/skills/swift-coding/references/style-guide.md)
+includes rationale and examples.
+
+These are opinionated house styles. The plugins contain instructions and
+references; they do not install language runtimes, dependencies, services, or
+hooks. Following their workflows requires the tools appropriate to the project.
 
 ## Repository layout
 
 ```text
 .agents/plugins/marketplace.json      ChatGPT / Codex catalog
 .claude-plugin/marketplace.json       Claude Code catalog
-plugins/python-coding/
+plugins/<name>/
   plugin.json                        Portable plugin manifest and OpenAI metadata
   .claude-plugin/plugin.json          Claude Code manifest
-  skills/python-coding/
+  skills/<name>/
     SKILL.md                         Shared instructions for both platforms
     agents/openai.yaml               Skill presentation and invocation metadata
-    references/style-guide.md        Full Python style guide
+    references/style-guide.md        Full language style guide
 ```
 
 ## Add or update a skill
@@ -83,6 +98,8 @@ Validate the Claude catalog and plugin from the repository root:
 ```sh
 claude plugin validate .
 claude plugin validate ./plugins/python-coding
+claude plugin validate ./plugins/typescript-coding
+claude plugin validate ./plugins/swift-coding
 ```
 
 For a local Claude session without installing the marketplace:

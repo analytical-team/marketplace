@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "swift-coding",
+  "version": "0.1.0",
+  "description": "Analytical Team's Swift coding standards for implementation and review.",
+  "author": {
+    "name": "Analytical Team"
+  },
+  "repository": "https://github.com/analytical-team/marketplace",
+  "keywords": ["swift", "swiftui", "coding", "code-review"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Swift Coding",
+        "shortDescription": "Swift coding standards for implementation and review",
+        "developerName": "Analytical Team",
+        "category": "Productivity"
+      }
+    }
+  }
+}

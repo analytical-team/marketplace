@@ -9,6 +9,16 @@
       "name": "python-coding",
       "source": "./plugins/python-coding",
       "description": "Analytical Team's Python coding standards for implementation and review."
+    },
+    {
+      "name": "typescript-coding",
+      "source": "./plugins/typescript-coding",
+      "description": "Analytical Team's TypeScript and React coding standards for implementation and review."
+    },
+    {
+      "name": "swift-coding",
+      "source": "./plugins/swift-coding",
+      "description": "Analytical Team's Swift coding standards for implementation and review."
     }
   ]
 }

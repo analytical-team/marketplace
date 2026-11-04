@@ -1,0 +1,6 @@
+interface:
+  display_name: "Swift Coding"
+  short_description: "Swift coding standards for implementation and review"
+  default_prompt: "Use $swift-coding to implement or review Swift code using Analytical Team's conventions."
+policy:
+  allow_implicit_invocation: true

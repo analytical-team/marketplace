@@ -1,0 +1,6 @@
+interface:
+  display_name: "TypeScript Coding"
+  short_description: "TypeScript and React standards for implementation and review"
+  default_prompt: "Use $typescript-coding to implement or review TypeScript and React code using Analytical Team's conventions."
+policy:
+  allow_implicit_invocation: true
