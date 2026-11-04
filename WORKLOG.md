@@ -29,3 +29,14 @@
 - Both plugins installed through isolated Claude and Codex marketplace profiles; Claude inventories each bundled skill and Codex reports them enabled.
 - Changes contain documentation and packaging only; no TypeScript or Swift implementation was added.
 - Commit identity: Tycho Engineering <tychoengr@gmail.com>; no coauthor attribution.
+
+## 2026-11-04 12:49 EST — Python topic guides
+
+- Split the 2,028-line Python guide into an overview and sixteen topic files using parsed Markdown heading boundaries, preserving all original content exactly.
+- Added direct links to every topic in `SKILL.md`, with guidance to load only the topics needed for the task, and updated the code-review reference.
+- Replaced the README's monolithic Python guide link with the topic index and bumped both Python plugin manifests to `0.1.1`.
+- Removed `references/style-guide.md`; the split files retain original section numbers so existing section cross-references remain meaningful.
+- The temporary migration script checks exact content preservation and refuses to overwrite destinations. It is outside the repository.
+- Parsed-link verification confirms that every local documentation link resolves and `SKILL.md` directly references all seventeen topic files.
+- Skill and native Claude validations passed. Isolated Claude and Codex installations of `0.1.1` preserve the complete skill directory, including every topic file.
+- Both temporary Python scripts pass Ruff and strict mypy checks.

@@ -17,9 +17,9 @@ description: >
 
 # Python coding style
 
-Load `references/style-guide.md` for the full guide with rationale and worked
-examples. Read the relevant section before writing code in that area — the
-checklist below is a reminder, not a substitute.
+Read the relevant topic guide below before writing code in that area. Each
+contains the rationale and worked examples; the checklist is a reminder, not
+a substitute. Load only the topics needed for the task.
 
 Rules with **safety or correctness** consequences (concurrency, errors, trust
 boundaries) are prescriptive. Style rules (naming, layout) are for consistency.
@@ -27,13 +27,35 @@ boundaries) are prescriptive. Style rules (naming, layout) are for consistency.
 ## Before you write
 
 1. If the rule you need is in the checklist and unambiguous, apply it.
-2. Otherwise open the matching section of `references/style-guide.md`. Section
-   numbers below map to headings in that file.
+2. Otherwise open the matching topic in the reference guides below. Section
+   numbers in the checklist map to those guides.
 3. Run everything with `uv run` — `uv run pytest`, `uv run scripts/...`.
 4. **Static quality gate**: Before declaring work complete, verify with both a
    linter (`ruff check`) and static type checker (`mypy --strict` or `ty check`).
    Never rely solely on passing test suites, as dynamic tests can easily miss
    uncalled methods, dead branches, or deprecated type overloads.
+
+## Reference guides
+
+| Section | Read when working on |
+| --- | --- |
+| [Overview](references/overview.md) | The guide's scope and how to apply its conventions |
+| [§1 — Language](references/language.md) | Python baseline, typing, and concurrency primitives |
+| [§2 — Naming](references/naming.md) | Names, enums, and enum member qualification |
+| [§3 — Project layout](references/project-layout.md) | Packages, numbered scripts, Click CLIs, and data directories |
+| [§4 — Modules](references/modules.md) | File organization and cohesive module boundaries |
+| [§5 — API design](references/api-design.md) | Public surfaces, protocols, and dependency contracts |
+| [§6 — Application structure](references/application-structure.md) | Services, resource lifecycles, settings, and FastAPI wiring |
+| [§7 — Documentation](references/documentation.md) | Docstrings and API contracts |
+| [§8 — Concurrency](references/concurrency.md) | Shared state, structured tasks, blocking I/O, and cancellation |
+| [§9 — Errors](references/errors.md) | Typed exceptions, boundary adaptation, and HTTP error mapping |
+| [§10 — Trust boundaries](references/trust-boundaries.md) | Parsing structured input, serialization, and injection prevention |
+| [§11 — Testing](references/testing.md) | Real integration boundaries, fixtures, edge cases, and test selection |
+| [§12 — Dependencies](references/dependencies.md) | Choosing and recording dependencies |
+| [§13 — Imports](references/imports.md) | Import order, exports, and import-time behavior |
+| [§14 — Multi-line strings](references/multiline-strings.md) | String literals and whitespace preservation |
+| [§15 — Reports and diagrams](references/reports-and-diagrams.md) | mdreport reports, diagram layout, and rendering |
+| [§16 — Review checklist](references/review-checklist.md) | Reviewing existing Python code for anti-patterns |
 
 ## Checklist
 
@@ -182,7 +204,7 @@ really choose. Full API:
 
 ## Reviewing existing code
 
-§16 of the guide is an anti-pattern quick reference: each entry pairs a smell
+The [review checklist (§16)](references/review-checklist.md) is an anti-pattern quick reference: each entry pairs a smell
 with its fix, grouped by architecture, concurrency, errors, trust boundaries,
 style, testing, reports and diagrams, and layout. Use it as the review checklist when auditing Python
 rather than re-deriving the rules.

@@ -52,8 +52,8 @@ publish the plugin to the public ChatGPT directory. See OpenAI's
 [`python-coding`](plugins/python-coding/skills/python-coding/SKILL.md) covers
 strict typing, structured concurrency, protocol-based APIs, settings, typed
 errors, parsing at trust boundaries, integration testing, and report generation.
-Its [full style guide](plugins/python-coding/skills/python-coding/references/style-guide.md)
-includes rationale and examples.
+Its [topic guides](plugins/python-coding/skills/python-coding/SKILL.md#reference-guides)
+include rationale and examples, loaded as needed.
 
 [`typescript-coding`](plugins/typescript-coding/skills/typescript-coding/SKILL.md)
 covers strict TypeScript, React, Vite, boundary parsing, async work,
@@ -81,7 +81,7 @@ plugins/<name>/
   skills/<name>/
     SKILL.md                         Shared instructions for both platforms
     agents/openai.yaml               Skill presentation and invocation metadata
-    references/style-guide.md        Full language style guide
+    references/                      Language guides, organized by topic as needed
 ```
 
 ## Add or update a skill
